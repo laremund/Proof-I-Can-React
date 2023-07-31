@@ -5,21 +5,16 @@ import FAQ from './FAQ';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to Reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <FAQ />
-      </header>
+      <div className="App-Container">
+        <h2>Details</h2>
+        <FAQ 
+          question='Contact Info'
+          answer='123-456-7890 | lars@mail.com | 123 This Court, NY, NY 12345'
+        />
+        <FAQ
+          
+        />
+      </div>
     </div>
   );
 }

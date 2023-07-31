@@ -3,12 +3,12 @@ import { Accordion, AccordionSummary, Typography, AccordionDetails } from '@mui/
 import  ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './faq.module.css';
 
-export default function FAQ() {
+export default function FAQ({question, answer}) {
     return (
     <div>
         <Accordion
         className={styles.accordion}
-        square={true}
+        // square={true}
         disableGutters={true}
         // onChange={handleChange}
         >
@@ -18,13 +18,13 @@ export default function FAQ() {
         >
             <div className={styles.summaryContainer}>
             <Typography variant="body1" className={styles.typography}>
-                {/* {question} */}
+                {question}
             </Typography>
             </div>
         </AccordionSummary>
         <AccordionDetails className={styles.details}>
             <Typography variant="body1" className={styles.answerTypography}>
-            {/* {answer} */}
+                {answer}
             </Typography>
         </AccordionDetails>
         </Accordion>
