@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import NerdProjects from './NerdProjects';
+import FAQ from './FAQ';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <NerdProjects />
+        <FAQ />
       </header>
     </div>
   );
