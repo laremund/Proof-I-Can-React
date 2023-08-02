@@ -14,7 +14,7 @@ export default function FAQ({ question, answer }) {
       <Accordion
         className={styles.accordion}
         // square={true}
-        disableGutters={true}
+        // disableGutters={true}
         // onChange={handleChange}
       >
         <AccordionSummary

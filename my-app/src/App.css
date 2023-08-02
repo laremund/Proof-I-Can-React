@@ -2,19 +2,51 @@
   --primary-dark: #1f2338ff;
   --primary-medium: #8696b0ff;
   --primary-light: #eae7f1ff;
-  --seconday-dull: #7d7785ff;
+  --secondary-dull: #7d7785ff;
   --secondary-vivid: #786d8dff;
 }
 
-.App {
-  text-align: center;
+body {
+  background-color: var(--primary-dark);
+}
+.resume {
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-Container {
-  background-color: var(--primary-dark);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.resume-container {
+  width: 90%;
+  height: 90%;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: grid;
+  grid-template:
+    "name name name"
+    "info accordion accordion"
+    "info accordion accordion"
+    "info accordion accordion"
+    "info comments comments";
+}
+
+.info-sidebar {
+  grid-area: info;
+  background-color: var(--secondary-dull);
+  border: 1px solid white;
+}
+
+.headshot-name-header {
+  grid-area: name;
+  background-color: var(--secondary-dull);
+  border: 1px solid white;
+  width: 100%;
+}
+
+.accordion-section {
+  grid-area: accordion;
+  border: 1px solid white;
+}
+
+.comment-section {
+  grid-area: comments;
+  border: 1px solid white;
 }
