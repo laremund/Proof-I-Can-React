@@ -13,6 +13,11 @@ export default function FAQ({ question, answer }) {
     <div>
       <Accordion
         className={styles.accordion}
+        sx={{
+          bgcolor: "#1e2228",
+          color: "#e6edf3",
+          border: "1px solid #22272e",
+        }}
         // square={true}
         // disableGutters={true}
         // onChange={handleChange}
@@ -20,7 +25,13 @@ export default function FAQ({ question, answer }) {
         <AccordionSummary
           // className={isExpanded ? styles.summaryExpanded : null}
           expandIcon={
-            <ExpandMoreIcon className={styles.expandIcon} fontSize="small" />
+            <ExpandMoreIcon
+              className={styles.expandIcon}
+              fontSize="small"
+              sx={{
+                fill: "#e6edf3",
+              }}
+            />
           }
         >
           <div className={styles.summaryContainer}>

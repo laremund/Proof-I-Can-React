@@ -1,24 +1,33 @@
 :root {
-  --primary-dark: #1f2338ff;
-  --primary-medium: #8696b0ff;
-  --primary-light: #eae7f1ff;
-  --secondary-dull: #7d7785ff;
-  --secondary-vivid: #786d8dff;
+  --dark: black;
+  --dark-ish: #0e1117;
+  --dark-medium: #1e2228;
+  --dark-border: #22272e;
+  --medium: #161c21;
+  --light: #e3e3e3;
+  --text-light: #e6edf3;
+
+  --header: 30px;
+  --subheader: 18px;
+  --body: 15px;
 }
 
 body {
-  background-color: var(--primary-dark);
+  background-color: var(--dark-ish);
+  color: var(--text-light);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .resume {
   height: 100vh;
   width: 100vw;
 }
 
 .resume-container {
-  width: 90%;
-  height: 90%;
-  margin-top: 10%;
-  margin-left: 10%;
+  width: 95%;
+  height: 95%;
+  margin-top: 5%;
+  margin-left: 5%;
   display: grid;
   grid-template:
     "name name name"
@@ -28,25 +37,83 @@ body {
     "info comments comments";
 }
 
+.subheader {
+  font-size: var(--subheader);
+  margin-left: 8px;
+}
+
 .info-sidebar {
   grid-area: info;
-  background-color: var(--secondary-dull);
-  border: 1px solid white;
+  background-color: var(--dark-ish);
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 30vw;
+  margin: 5px;
+}
+
+.body-text {
+  height: 40%;
+  padding: 8px;
+  margin: 8px;
+  background-color: var(--dark-medium);
+  border-radius: 5px;
+  font-size: var(--body);
 }
 
 .headshot-name-header {
   grid-area: name;
-  background-color: var(--secondary-dull);
-  border: 1px solid white;
+  background-color: var(--dark);
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
   width: 100%;
 }
 
-.accordion-section {
+.headshot {
+  margin: 5px;
+  width: 20vw;
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+}
+
+.name {
+  margin: 5px;
+  width: 60vw;
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+  font-size: var(--header);
+}
+
+.accordion-section-container {
   grid-area: accordion;
-  border: 1px solid white;
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+  margin-right: 10%;
+}
+
+.accordion-section {
+}
+
+.info-box {
+  background-color: var(--dark-ish);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.info-box div {
+  padding: 5px;
 }
 
 .comment-section {
   grid-area: comments;
-  border: 1px solid white;
+  border: 1px solid var(--dark-border);
+  border-radius: 5px;
 }
