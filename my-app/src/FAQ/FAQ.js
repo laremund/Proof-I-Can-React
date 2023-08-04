@@ -40,7 +40,7 @@ export default function FAQ({ question, answer }) {
             </Typography>
           </div>
         </AccordionSummary>
-        <AccordionDetails className={styles.details}>
+        <AccordionDetails>
           <Typography variant="body1" className={styles.answerTypography}>
             {answer}
           </Typography>
