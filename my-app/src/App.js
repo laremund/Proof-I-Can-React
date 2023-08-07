@@ -14,7 +14,7 @@ function App() {
           <div className="headshot-container">
             <div className="headshot">Headshot</div>
           </div>
-          <div className="name">Lars Remund</div>
+          {/* <div className="name">Lars Remund</div> */}
         </header>
         <div className="info-sidebar">
           <div className="body-text">

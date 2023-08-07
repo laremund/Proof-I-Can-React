@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -9,6 +10,10 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "./faq.module.css";
 
 export default function FAQ({ question, answer }) {
+  const [isExpanded, setExpanded] = useState(false);
+  const handleChange = () => {
+    setExpanded(!isExpanded);
+  };
   return (
     <div>
       <Accordion
@@ -20,7 +25,7 @@ export default function FAQ({ question, answer }) {
         }}
         // square={true}
         // disableGutters={true}
-        // onChange={handleChange}
+        onChange={handleChange}
       >
         <AccordionSummary
           // className={isExpanded ? styles.summaryExpanded : null}
@@ -33,17 +38,16 @@ export default function FAQ({ question, answer }) {
               }}
             />
           }
+          sx={{
+            bgcolor: "#0e1117",
+          }}
         >
           <div className={styles.summaryContainer}>
-            <Typography variant="body1" className={styles.typography}>
-              {question}
-            </Typography>
+            <Typography className={styles.typography}>{question}</Typography>
           </div>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body1" className={styles.answerTypography}>
-            {answer}
-          </Typography>
+          <Typography className={styles.answerTypography}>{answer}</Typography>
         </AccordionDetails>
       </Accordion>
     </div>
